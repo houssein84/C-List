@@ -122,6 +122,18 @@ namespace C__List
             hashtable.Clear();
             Console.WriteLine("Hash Table Count :"+hashtable.Count.ToString());
 
+            hashtable.Add("Key1", Students.Find(n => n.Name == "Adam"));//Here We Are Boxing Student Adam 'Value' And Giving It A Unique Key 'Adam';
+            hashtable.Add("Key2", Students.Find(n => n.Name == "Sara"));//Here We Are Boxing Student Adam 'Value' And Giving It A Unique Key 'Adam';
+            hashtable.Add("Key3", Students.Find(n => n.Name == "Ali"));
+            hashtable.Add("Key4", Students.Find(n => n.Name == "Zain"));//Here We Are Boxing Student Adam 'Value' And Giving It A Unique Key 'Adam';
+
+
+
+            foreach (DictionaryEntry entry in hashtable)
+            {
+                Console.WriteLine($"Key :{entry.Key} ,Value :{entry.Value.ToString()}");
+            }
+
 
 
 
