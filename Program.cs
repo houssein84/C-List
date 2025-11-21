@@ -99,6 +99,10 @@ namespace C__List
             Console.WriteLine($"Accesing Key2 Element :{hashtable["Key2"].ToString()}");
 
             hashtable.Remove("Key2");
+            bool DoesKey2Exists = hashtable.Contains("Key2");
+
+            if (DoesKey2Exists)
+                Console.WriteLine("Yes Key2 Is Exists");
 
             Console.WriteLine("Sara Is Removed And Adam's Grade Updated\n Print All Elemnts With There Keys");
             Students.Find(n => n.Name == "Adam").Grade = 100;
